@@ -1,0 +1,22 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Npm
+node_modules
+
+# Code coverage
+coverage
+
+# Nyc
+.nyc_output
+
+# Source
+src
+demos
+tests
+
+# Others
+.awcache
