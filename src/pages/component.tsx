@@ -9,8 +9,8 @@ class Props { }
 
 class State { }
 
-const Double = Stream.create(data => data * 2)
-const MapToValue = Stream.create(data => ({ value: data }))
+const Double = Stream.create(stream => stream.map(data => data * 2))
+const MapToValue = Stream.create(stream => stream.map(data => ({ value: data })))
 
 export default class Page extends React.PureComponent<Props, State> {
   public static defaultProps = new Props()
@@ -31,8 +31,8 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <pre className="highlight highlight-source-typescript">
           {[
-            "const Double = Stream.create(data => data * 2)",
-            "const MapToValue = Stream.create(data => ({ value: data }))"
+            "const Double = Stream.create(stream => stream.map(data => data * 2))",
+            "const MapToValue = Stream.create(stream => stream.map(data => ({ value: data })))"
           ].join("\n")}
         </pre>
 

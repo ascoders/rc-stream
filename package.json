@@ -24,7 +24,7 @@
     "antd": "^3.2.1",
     "highlight.js": "^9.12.0",
     "pri": "0.0.46",
-    "rc-stream": "^1.0.2"
+    "rc-stream": "^1.0.3"
   },
   "devDependencies": {
     "@types/highlight.js": "^9.12.2",
