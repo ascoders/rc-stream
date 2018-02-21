@@ -1,6 +1,6 @@
 import { Input } from "antd"
 import * as highlight from "highlight.js"
-// import Stream from "rc-stream"
+import Stream from "rc-stream"
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 import { Observable } from "rxjs"
