@@ -48,7 +48,7 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <h2>Nested Stream</h2>
 
-        <p>We can also separate into two Stream:</p>
+        <p>We can also separate into two Streams:</p>
 
         <pre className="highlight highlight-source-tsx">
           {[
