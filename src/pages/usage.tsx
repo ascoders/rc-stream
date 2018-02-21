@@ -5,6 +5,8 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import { Observable } from "rxjs"
 
+console.log(123,Stream)
+
 class Props { }
 
 class State { }
@@ -44,9 +46,9 @@ export default class Page extends React.PureComponent<Props, State> {
           ].join("\n")}
         </pre>
 
-        {/* <Stream stream={stream$}>
+        <Stream stream={stream$}>
           <Input />
-        </Stream> */}
+        </Stream>
 
         <h2>With handle</h2>
 
