@@ -1,21 +1,14 @@
 {
-  "name": "rc-stream",
-  "version": "0.0.1",
+  "name": "rc-stream-docs",
+  "version": "1.0.0",
   "description": "",
-  "main": "built/index.js",
-  "types": "src/index.ts",
+  "main": "index.js",
   "scripts": {
-    "test": "tsc && nyc --reporter=lcov --reporter=text --reporter=json ava && rm -rf .nyc_output",
-    "posttest": "codecov -f coverage/*.json -t",
-    "prepublish": "rm -rf built && tsc && npm run build",
-    "start": "run-react develop",
-    "tslint": "tslint './src/**/*.?(ts|tsx)'",
-    "build": "run-react production"
-  },
-  "ava": {
-    "files": [
-      "built/**/*.test.js"
-    ]
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pri",
+    "build": "pri build",
+    "preview": "pri preview",
+    "deploy": "pri build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -27,43 +20,12 @@
     "url": "https://github.com/ascoders/rc-stream/issues"
   },
   "homepage": "https://github.com/ascoders/rc-stream#readme",
-  "devDependencies": {
-    "@types/node": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "@types/webpack": "*",
-    "ascoders-tslint-config": "^1.0.2",
-    "ava": "^0.23.0",
-    "codecov": "^3.0.0",
-    "nyc": "^11.3.0",
-    "pre-commit": "^1.2.2",
-    "react-dom": "^16.1.0",
-    "run-react": "^2.1.8",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "webpack": "^3.8.1"
-  },
   "dependencies": {
-    "rxjs": "*",
-    "react": "*"
+    "antd": "^3.2.1",
+    "pri": "0.0.46",
+    "rc-stream": "0.0.1"
   },
-  "pre-commit": [
-    "tslint"
-  ],
-  "run-react": {
-    "entrys": [
-      "demos/index"
-    ],
-    "productionEntrys": [
-      "src/index"
-    ],
-    "dlls": [
-      "react",
-      "react-dom"
-    ],
-    "production": {
-      "path": "built",
-      "filename": "bundle.js"
-    }
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
