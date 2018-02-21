@@ -11,6 +11,7 @@
       "es6",
       "scripthost"
     ],
+    "skipLibCheck": true,
     "target": "es5",
     "outDir": "built",
     "sourceMap": true

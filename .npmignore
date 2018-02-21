@@ -20,3 +20,6 @@ tests
 
 # Others
 .awcache
+dist
+.temp
+.vscode
