@@ -10,7 +10,7 @@ class State {
   public data?: any = null
 }
 
-export class Stream extends React.PureComponent<Props, State> {
+export default class Stream extends React.PureComponent<Props, State> {
   public static defaultProps = new Props()
   public static streamClass = Stream
   public static create?:
