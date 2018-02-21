@@ -24,7 +24,7 @@ export default class Page extends React.PureComponent<Props, State> {
       <div>
         <h1>Nested</h1>
 
-        <p>If we want to double our stream, we write this code generally:</p>
+        <p>If we want to double our stream, write this code generally:</p>
 
         <pre className="highlight highlight-source-tsx">
           {[
@@ -50,7 +50,7 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <h2>Nested Stream</h2>
 
-        <p>We can also separate to two Stream:</p>
+        <p>We can also separate into two Stream:</p>
 
         <pre className="highlight highlight-source-tsx">
           {[
