@@ -62,10 +62,13 @@ export default class Page extends React.PureComponent<Props & RouteComponentProp
               key="examples"
               title="Examples"
             >
-              <Menu.Item key="/examples/form">
-                <Link to="/examples/form">Form</Link>
+              <Menu.Item key="/examples/table">
+                <Link to="/examples/table">Table</Link>
               </Menu.Item>
             </SubMenu>
+            <Menu.Item key="/compare-to-callback">
+              <Link to="/compare-to-callback">Compare to callback</Link>
+            </Menu.Item>
           </Menu>
         </Sider>
         <Layout>

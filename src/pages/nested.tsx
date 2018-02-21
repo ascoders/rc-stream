@@ -28,20 +28,18 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <pre className="highlight highlight-source-tsx">
           {[
-            "<Stream stream={stream$} handle={stream =>",
-            "  stream",
-            "    .map(data => data * 2)",
-            "    .map(data => ({ value: data }))",
+            "<Stream stream={stream$} handle={stream => stream",
+            "  .map(data => data * 2)",
+            "  .map(data => ({ value: data }))",
             "}>",
             "  <Input />",
             "</Stream>"
           ].join("\n")}
         </pre>
 
-        <Stream stream={stream$} handle={stream =>
-          stream
-            .map(data => data * 2)
-            .map(data => ({ value: data }))
+        <Stream stream={stream$} handle={stream => stream
+          .map(data => data * 2)
+          .map(data => ({ value: data }))
         }>
           <Input />
         </Stream>
@@ -73,6 +71,9 @@ export default class Page extends React.PureComponent<Props, State> {
 
   private freshHighlight = () => {
     const markdownContainer = ReactDOM.findDOMNode(this)
+    if (!markdownContainer) {
+      return
+    }
     Array.from(markdownContainer.querySelectorAll("pre")).forEach(eachPre => {
       highlight.highlightBlock(eachPre)
     })

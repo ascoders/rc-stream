@@ -53,12 +53,21 @@ export default class Page extends React.PureComponent<Props, State> {
             <Input />
           </MapToValue>
         </Double>
+
+        <br /><br />
+
+        <p>
+          For more component, see examples.
+        </p>
       </div>
     )
   }
 
   private freshHighlight = () => {
     const markdownContainer = ReactDOM.findDOMNode(this)
+    if (!markdownContainer) {
+      return
+    }
     Array.from(markdownContainer.querySelectorAll("pre")).forEach(eachPre => {
       highlight.highlightBlock(eachPre)
     })
