@@ -5,8 +5,6 @@ import * as React from "react"
 import * as ReactDOM from "react-dom"
 import { Observable } from "rxjs"
 
-console.log(123,Stream)
-
 class Props { }
 
 class State { }
@@ -20,7 +18,8 @@ export default class Page extends React.PureComponent<Props, State> {
   }
 
   public render() {
-    const stream$ = Observable.interval(1000).map(data => ({ value: data }))
+    const inputStream$ = Observable.interval(1000).map(data => ({ value: data }))
+    const stream$ = Observable.interval(500)
 
     return (
       <div>
@@ -46,17 +45,18 @@ export default class Page extends React.PureComponent<Props, State> {
           ].join("\n")}
         </pre>
 
-        <Stream stream={stream$}>
+        <Stream stream={inputStream$}>
           <Input />
         </Stream>
+        <br /><br />
 
         <h2>With handle</h2>
 
-        <p>If <code>stream</code> can't directly pass to component, like following code:</p>
+        <p>If <code>stream</code> can't passed to component directly, like following code:</p>
 
         <pre className="highlight highlight-source-typescript">
           {[
-            "const stream$ = Observable.interval(1000)"
+            "const stream$ = Observable.interval(500)"
           ].join("\n")}
         </pre>
 
@@ -74,6 +74,10 @@ export default class Page extends React.PureComponent<Props, State> {
             "</Stream>"
           ].join("\n")}
         </pre>
+
+        <Stream stream={stream$} handle={stream => stream.map(data => ({ value: data }))}>
+          <Input />
+        </Stream>
       </div>
     )
   }
