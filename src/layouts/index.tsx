@@ -38,9 +38,13 @@ export default class Page extends React.PureComponent<Props & RouteComponentProp
     return (
       <Layout style={{ minHeight: "100vh" }}>
         <Sider>
-          <div style={{ color: "white", display: "flex", alignItems: "center", height: 50, fontSize: 18, paddingLeft: 20 }}>
+          <a
+            href="https://github.com/ascoders/rc-stream"
+            target="_blank"
+            style={{ color: "white", display: "flex", alignItems: "center", height: 50, fontSize: 18, paddingLeft: 20 }}
+          >
             rc-stream
-          </div>
+          </a>
           <Menu theme="dark" selectedKeys={[this.props.location.pathname]} mode="inline">
             <Menu.Item key="/">
               <Link to="/">Introduction</Link>

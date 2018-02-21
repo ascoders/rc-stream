@@ -18,8 +18,8 @@ export default class Page extends React.PureComponent<Props, State> {
   }
 
   public render() {
-    const inputStream$ = Observable.interval(1000).map(data => ({ value: data }))
-    const stream$ = Observable.interval(500)
+    const inputStream$ = Observable.interval(1000).startWith(0).map(data => ({ value: data }))
+    const stream$ = Observable.interval(500).startWith(0)
 
     return (
       <div>
@@ -29,7 +29,7 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <pre className="highlight highlight-source-typescript">
           {[
-            "const inputStream$ = Observable.interval(1000).map(data => ({value:  data }))"
+            "const inputStream$ = Observable.interval(1000).startWith(0).map(data => ({value:  data }))"
           ].join("\n")}
         </pre>
 
@@ -56,7 +56,7 @@ export default class Page extends React.PureComponent<Props, State> {
 
         <pre className="highlight highlight-source-typescript">
           {[
-            "const stream$ = Observable.interval(500)"
+            "const stream$ = Observable.interval(500).startWith(0)"
           ].join("\n")}
         </pre>
 
