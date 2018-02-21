@@ -30,10 +30,9 @@ export default class Page extends React.PureComponent<Props, State> {
           {[
             "<Stream stream={stream$} handle={stream =>",
             "  stream",
-            "  stream={stream$}",
             "    .map(data => data * 2)",
             "    .map(data => ({ value: data }))",
-            "  }>",
+            "}>",
             "  <Input />",
             "</Stream>"
           ].join("\n")}
